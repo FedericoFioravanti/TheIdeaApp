@@ -12,6 +12,7 @@ gem 'carrierwave'
 gem 'ratyrate'
 gem 'devise'
 gem 'font-awesome-sass'
+gem 'devise-bootstrapped', github: 'king601/devise-bootstrapped', branch: 'bootstrap4'
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'

@@ -12,10 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2020_10_20_175053) do
 
-  create_table "categories", force: :cascade do |t|
-    t.string "name"
-  end
-
   create_table "ideas", force: :cascade do |t|
     t.string "name"
     t.text "description"
