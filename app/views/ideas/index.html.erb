@@ -11,6 +11,8 @@
     <h5 class="card-title"><%= idea.name %></h5>
     <p class="card-text"><%= idea.description %></p>
     <div class="btn btn-primary"><%= link_to 'Show', idea %></div>
+    <div class="btn btn-primary"><%= link_to 'Edit', edit_idea_path(idea) %></div>
+    <div class="btn btn-primary"><%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %></div>
   </div>
   </div>
 </div>
