@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Idea.create(name:'Star Wars')
+Idea.create(name:'Shining')
+Idea.create(name:'Octopus')
+Idea.create(name:'Doom')

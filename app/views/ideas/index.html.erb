@@ -1,11 +1,57 @@
-<p id="notice"><%= notice %></p>
-
+<div class="row">
+  <div class="col-sm-12">
 <h1>Ideas</h1>
+</div>
+</div>
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="<%= asset_path('1.jpg') %>" alt="Los Angeles" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>Los Angeles</h3>
+        <p>We had such a great time in LA!</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="<%= asset_path('2.jpg') %>" alt="Chicago" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>Chicago</h3>
+        <p>Thank you, Chicago!</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="<%= asset_path('3.jpg') %>" alt="New York" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>New York</h3>
+        <p>We love the Big Apple!</p>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+<h2 class="ml-3 mx-auto">Check our best ideas</h2>
+  </div>
+</div>
+
 
 <div class="row">
 <% @ideas.each do |idea| %>
-  <div class="col-sm-4">
-<div class="card" style="width: 18rem;">
+  <div class="col-sm-3">
+<div class="card">
   <%= image_tag idea.picture_url, width: '100%', class: 'card-img-top' if idea.picture.present? %>
   <div class="card-body">
     <h5 class="card-title"><%= idea.name %></h5>
@@ -18,17 +64,6 @@
 </div>
 <% end %>
 </div>
-
-<hr>
-
-    <% @ideas.each do |idea| %>
-      <h2><%= idea.name %></h2>
-      <p><%= idea.description %></p>
-      <div class="image-style"><%= image_tag idea.picture_url, width: '100%' if idea.picture.present? %></div>
-      <div class="blocks-edit"><%= link_to 'Show', idea %>
-      <%= link_to 'Edit', edit_idea_path(idea) %>
-      <%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-    <% end %>
 
 <br>
 
